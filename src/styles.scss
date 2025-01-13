@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #bbbabe;
+  --secondary-color: #836ff7;
+  --light-background-color: #ffffff;
+  --colored-background-color: #F9FBFF;
+  --shadow-color: #F9FBFF;
+  --text-color: #000000;
+  --icon-color: #000000;
+}
+
+.dark-theme {
+  // --primary-color: #228B22;
+  // --secondary-color: #FFD700;
+  --light-background-color: #333333;
+  --colored-background-color: rgba(255, 255, 255, 0.07);
+  --shadow-color: #FFFFFF;
+  --text-color: #ffffff;
+  --icon-color: #bbbabe;
+}
+
+body {
+  background-color: var(--light-background-color, #ffffff);
+  color: var(--text-color, #000000);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}

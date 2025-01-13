@@ -1,0 +1,95 @@
+// @import '../../../styles.scss';
+
+.name {
+  color: var(--text-color);
+  letter-spacing: .25em;
+}
+
+.social {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+// input:checked+div {
+//   background-color: var(--primary-color);
+//   /* Green when active */
+// }
+
+// input:checked+div>div {
+//   background-color: var(--text-color);
+//   transform: translateX(0);
+// }
+
+// input+div {
+//   background-color: var(--text-color);
+//   /* Inactive background color */
+// }
+
+// input+div>div {
+//   background-color: #ffffff;
+//   transform: translateX(1.325rem);
+// }
+
+button {
+  outline: none;
+
+  @media screen and (max-width: 768px) {
+    width: 2.875rem;
+    height: 1.57rem;
+  }
+}
+
+button {
+  background-color: var(--icon-color);
+  /* Inactive background color */
+}
+
+button div {
+  background-color: var(--light-background-color);
+
+  @media screen and (max-width: 768px) {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+button.active div {
+  background-color: var(--text-color);
+
+  @media screen and (max-width: 768px) {
+    translate: translateX(1.57rem);
+  }
+}
+
+.icon-color {
+  color: var(--icon-color);
+}
+
+.globe-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  // background-color: transparent;
+  // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  transform: scale(2);
+
+  &:hover {
+    transform: scale(2.5);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  @media screen and (max-width: 768px) {}
+}
+
+ng-lottie {
+  width: 90%;
+  height: 90%;
+
+  object-fit: contain;
+}
