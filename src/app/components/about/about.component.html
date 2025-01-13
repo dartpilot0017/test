@@ -1,0 +1,69 @@
+<div class="aboutContainer">
+  <div class="w-[100%]">
+    <div class="facts" *ngIf="facts && facts.length">
+      <div class="number-text" *ngFor="let fact of facts">
+        <!-- Regular display -->
+        <h3 class="number font-mono">{{ fact.title }}</h3>
+        <p class="text">{{ fact.description }}</p>
+      </div>
+    </div>
+
+    <div class="mobile" *ngIf="facts && facts.length">
+      <div class="number-text" *ngFor="let fact of facts">
+        <!-- Animated display using ngx-typed-js -->
+
+      </div>
+    </div>
+  </div>
+  <div class="w-[100%]">
+    <div class="aboutMe">
+      <div class="about">
+        <h6 class="font-sans">About Me</h6>
+        <h3 class="font-mono">Professional <span class="font-mono">Problem
+            Solutions</span> for
+          website and
+          mobile Apps</h3>
+        <p>As a dedicated front-end developer, I focus on building dynamic,
+          responsive, and intuitive web interfaces. With expertise in HTML,
+          CSS,
+          and JavaScript, I transform concepts into visually appealing,
+          user-centric websites that work seamlessly across devices. I'm
+          passionate about keeping up with the latest web technologies and
+          continuously enhancing functionality and performance in my
+          projects.</p>
+      </div>
+      <div id="animation" class="animation">
+        <ng-lottie
+          [options]="options[0]"
+          class="full-coverage"
+          (animationCreated)="animationCreated($event)">
+        </ng-lottie>
+      </div>
+    </div>
+    <div class="aboutMe-reversed">
+      <div id="animation" class="animation">
+        <ng-lottie
+          [options]="options[1]"
+          class="full-coverage"
+          (animationCreated)="animationCreated($event)">
+        </ng-lottie>
+      </div>
+      <div class="about">
+        <h6 class="font-sans">About Me</h6>
+        <h3 class="font-mono">Professional <span class="font-mono">Problem
+            Solutions</span> for
+          website and
+          mobile Apps</h3>
+        <p>As a dedicated front-end developer, I focus on building dynamic,
+          responsive, and intuitive web interfaces. With expertise in HTML,
+          CSS,
+          and JavaScript, I transform concepts into visually appealing,
+          user-centric websites that work seamlessly across devices. I'm
+          passionate about keeping up with the latest web technologies and
+          continuously enhancing functionality and performance in my
+          projects.</p>
+      </div>
+
+    </div>
+  </div>
+</div>

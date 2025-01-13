@@ -1,1 +1,44 @@
-<p>hero works!</p>
+
+<div
+  class="heroContainer">
+  <app-header></app-header>
+  <div class="flex flex-col items-center justify-center">
+    <div class="image-placeholder justify-center">
+      <div class="image">
+        <img src="/assets/phillip.png" alt>
+      </div>
+      <div class="expert-box">
+        <img src="/assets/badge.svg" alt>
+        <p class="font-mono font-bold">
+          Veteran Expert
+        </p>
+      </div>
+    </div>
+    <div class="text">
+      <h2>
+        Front-end & Mobile Developer
+      </h2>
+      <p class="font-mono">
+        Over a decade of experience in building exceptional website and mobile
+        apps.
+      </p>
+    </div>
+    <div class="buttons">
+      <button class="download bg-[--secondary-color]" (click)="downloadPdf()">
+        <div id="download-container" class="download-container">
+          <ng-lottie
+            [options]="options"
+            class="full-coverage"
+            (animationCreated)="animationCreated($event)">
+          </ng-lottie>
+        </div>
+        <p class="font-mono">Download CV</p>
+      </button>
+      <button class="download bg-[--primary-color] font-mono">
+        Lets chat
+        <!-- <p class>Lets chat</p> -->
+      </button>
+
+    </div>
+  </div>
+</div>
