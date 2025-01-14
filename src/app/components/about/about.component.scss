@@ -17,6 +17,8 @@
 
   @media (max-width: 768px) {
     padding: 1.5rem .5rem;
+    margin: 0;
+    width: 100%;
   }
 }
 
@@ -106,6 +108,10 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  p {
+    text-align: justify;
+  }
 }
 
 h6 {
@@ -115,6 +121,7 @@ h6 {
   background: linear-gradient(180deg, #836FF8 100%, #BFB4F8 100%);
   -webkit-background-clip: text;
   background-clip: text;
+  text-decoration: underline !important;
   /* Required for text gradient in webkit-based browsers */
   color: transparent;
 }
@@ -162,7 +169,102 @@ p {
 ng-lottie {
   width: 100%;
   height: 100%;
-
-
   object-fit: contain;
+}
+
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow wrapping to the next row */
+  gap: 0.5rem;
+  /* Space between items */
+
+  .animation {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.languages>* {
+  flex: 0 0 calc((100% - 1.5rem) /4);
+  /* Ensure 3 elements per row */
+  box-sizing: border-box;
+
+  /* Include padding and borders in the width calculation */
+  padding: .5rem;
+
+  @media screen and (max-width: 768px) {
+    flex: 0 0 calc((100% - 1rem) /3);
+  }
+}
+
+.language {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .icon {
+    width: 25px;
+    height: 25px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.075);
+    transition: transform .3sec ease-in-out;
+
+    .icon {
+      transform: scale(1.175);
+      transition: transform .3sec ease-in-out;
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  background-color: var(--contact-color);
+  border-radius: 1rem;
+  border: var(--shadow-color) 1px solid;
+  gap: 1rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.icon-text {
+  display: flex;
+  padding: .5rem .875rem;
+  flex-direction: column;
+  gap: .5rem;
+
+  h6 {
+    color: var(--text-color);
+    text-decoration: none !important;
+  }
+
+  .details {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+
+    // justify-content: center;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    a {
+      @extend p;
+      font-weight: 500;
+    }
+  }
 }
